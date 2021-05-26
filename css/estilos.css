@@ -1,0 +1,304 @@
+/* ---------------- Estilos generales ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.section-title{
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.125em;      /* 50px */
+}
+
+.btn-customized{
+    background: #5c28d4;
+    padding: 1em 2em;       /* 16px 32 px */
+    font-size: 1.5em;       /* 24px */
+    color: white;
+    border-radius: 3.125em 3.125em 3.125em 3.125em;         /* 50px en cada esquina */
+}
+
+.btn-customized:hover{
+    color: white;
+    background: #2dcb42;
+}
+
+.me-section,
+.portfolio-section,
+.contact-section {
+    margin-top: 6.25em;     /* 100px */
+}
+
+.sub-title-section{
+    font-size: 2.5em;       /* 40px */
+    margin-top: 2.5em;      /* 40px */
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+/* ---------------- Estilos del Menú ---------------- */
+/* Preparamos al elemento (en este caso al menú), para poder animarlo */
+.animate-upwards{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/* Clase a añadir desde jQuery para la animación */
+.showUpwards {
+    animation: ir_arriba 2s; 
+}
+/* -------------------------------------------------- */
+@keyframes ir_arriba {
+    /* Cuando apenas empiece la animación,
+    le estamos diciendo que se desplace 
+    hacia abajo (que comience desde abajo
+    60 px). */
+    0% {
+        transform: translateY(60px); 
+    }
+    /* Cuando finalice la animación, el 
+    elemento de desplazará hacia arriba
+    (se desplazará 60px hacia arriba en 
+    este caso). */
+    100% {
+        transform: translateY(0); 
+    } 
+}
+/* ---------------- Estilos del Main ---------------- */
+
+/* Estilos de la portada y sus items */
+
+.foto-portada{
+    background: url('../img/Portadame.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(45%);
+    background-position: center 0;
+    height: 46.25em;
+}
+
+.first-line,
+.second-line{
+    color: white;
+    /* Aplicamos sombreado a las letras de los títulos principales */
+    text-shadow: -1.5px -1.5px 0 #000,   1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+}
+
+.first-line{
+    font-size: 3.75em;      /* 60px */
+}
+
+.second-line{
+    font-size: 5em;         /* 80px */
+}
+
+/* Estilos de la sección about me */
+
+.me-section .main-about .contenedor {
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); 
+}
+
+.me-section .main-about .contenedor .foto {
+    margin-top: 1em;        /* 16px */
+}
+
+.me-section .main-about .contenedor .foto img {
+    width: 100%;
+    vertical-align: top;
+    height: auto; 
+}
+
+.me-section .main-about .contenedor .info {
+    padding: 1.25em;        /* 20px */
+    line-height: 1.7em;     /* 27.2px */
+}
+
+.me-section .main-about .contenedor .info .titulo-info {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 3.5em; 
+}
+
+.me-section .main-about .contenedor .info > p {
+    margin: 0; 
+}
+
+.me-section .main-about .contenedor .info .contenido {
+    margin-top: 0px;
+    color: #292929;
+    margin-bottom: 2em;                /* 32px */
+}
+
+/* Estilos Portfolio */
+
+.portfolio-section .images-container .imagen{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17.5em;                          /* 280px */
+    border-radius: 1em 1em 1em 1em;         /* 16px en cada esquina */
+}
+
+/* Subimos las imagenes de la sección portfolio */
+.portfolio-section .row:nth-child(2) .images-container .imagen{
+    background-image: url('../img/consola.PNG');
+    background-size: contain;
+}
+
+.portfolio-section .row:nth-child(3) .images-container .imagen{
+    background-image: url('../img/PaginaPersonalAyrton.PNG');
+    background-position: center 20%;
+}
+
+.portfolio-section .row:nth-child(4) .images-container .imagen{
+    background-image: url('../img/quadcopter.jpg');
+}
+
+.portfolio-section .row:nth-child(5) .images-container .imagen{
+    background-image: url('../img/lyondellbasell.jpg');
+}
+
+/* --------------------------------------------------- */
+
+/* Creamos la linea vertical roja del timeline */
+.portfolio-section .timeline{
+   border-right: thick solid #ff0000;
+   height: 31.25em;                         /* 500px */
+}
+
+.portfolio-section .timeline li{
+    list-style: none;
+}
+
+.portfolio-section .timeline-april{
+    margin-left: 36.5px;
+}
+
+.portfolio-section .timeline-may{
+    margin-left: -6.5px;
+}
+
+/* Con esto, juntamos la linea del timeline */
+.portfolio-section .fila-info{
+    margin-top: -1em;
+}
+
+.portfolio-section .visit-me-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2em;                   /* 16px top-bottom, 32px left-right */
+    background: red;
+    color: white;
+    border-radius: 3.125em 3.125em 3.125em 3.125em;         /* 50px en cada esquina */
+}
+
+.portfolio-section .visit-me-btn:hover{
+    background: #2dcb42;
+}
+
+/* Estilos Contacto */
+.contact-section .contact-photo-container{
+    background-image: url('../img/contact-me-photo-cover.jpg');
+    width: 100vw;
+    background-size: cover;
+}
+
+.contact-section .field-container{
+    margin-top: 4.5em;            /* 72px */
+}
+
+/* Cambiamos de tamaño y color de letra a los textos de campo del formulario */
+.contact-section .form-label{
+    color: white;
+    font-size: 1.3em;
+    text-shadow: -1.5px -1.5px 0 #000,   1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+}
+
+/* ------------- Mediaqueries --------------- */
+@media screen and (max-width: 1200px){
+    /* Modificamos ancho de la imagen del portafolio para que cuadre mejor */
+    .portfolio-section .images-container .imagen{
+        width: 12.5em;                          /* 200px */
+    }
+}
+
+@media screen and (max-width: 991px){
+    /* Modificamos el margin-left para que cuadre con la linea del timeline de los otros eventos */
+    .portfolio-section .timeline-april{
+        margin-left: 0px;
+    }
+
+    /* Modificamos padding del boton de submit */
+    .btn-customized.contact{
+        padding: 0.8em 1.6em;       /* 12.8px 25.6px */
+        font-size: 1em;             /* 16px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .first-line{
+        font-size: 2.5em;          /* 40px */
+    }
+
+    /* Ocultamos barra vertical roja  */
+    .timeline{
+        display: none;
+    }
+    
+    .second-line{
+        font-size: 3.75em;         /* 60px */
+    }
+
+    .btn-customized{
+        margin-top: 1.25em;  
+        padding: 0.5em 1em;       /* 8px 16px */
+        font-size: 1.25em;        /* 20px */
+    }
+
+    .portfolio-section .images-container .imagen{
+        width: 21.875em;           /* 350px */
+    }
+
+    .portfolio-section .fila-info{
+        margin-top: 2em;           /* 32px */
+    }
+
+    /* Cambiamos la forma de mostrar la imagen de la consola para que no esté tan 
+    separado su contenedor del texto cuando la pantalla es más pequeña */
+    .portfolio-section .row:nth-child(2) .images-container .imagen{
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .first-line{
+        font-size: 1.5625em;      /* 25px */
+    }
+    
+    .second-line{
+        font-size: 2.1875em;      /* 35px */
+    }
+
+    /* Modificamos el margin-top del contenedor del boton de la portada */
+    .foto-portada .btn-container{
+        margin-top: 1.25em;  
+    }
+
+    .btn-customized{
+        padding: 0.5em 1em;       /* 8px 16px */
+        font-size: 1em;       /* 20px */
+    }
+
+    .portfolio-section .images-container .imagen{
+        width: 90vw;       
+    }
+}
